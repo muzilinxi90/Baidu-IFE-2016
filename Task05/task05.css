@@ -1,0 +1,208 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 16px "Microsoft YaHei" ;
+	background: #dedede;
+}
+
+/*页眉*/
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background: #333;
+}
+
+#header .header-logo img{
+	float: left;
+	max-height: 50px;
+}
+
+#header .header-nav {
+	float: right;
+}
+
+#header .header-nav li {
+	float: left;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#header .header-nav a:link {
+	color: #fff;
+} 
+
+#header .header-nav a:visited {
+	color: #8a8e8d;
+}
+
+#header .header-nav a:hover {
+	color: #0f0;
+} 
+
+#header .header-nav a:active {
+	color: #00f;
+}
+
+#main {
+	margin-right: 410px;
+}
+
+/*正文*/
+.article {
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px solid #cbcbcb;
+	border-right: 2px solid #848484;
+	border-bottom: 2px solid #848484;
+	border-left: 1px solid #cbcbcb;
+	padding: 1.5em;
+	background-color: #fff;
+}
+
+.article h2 {
+	font-size: 24px;
+}
+
+.article h3 {
+	font-size: 18px;
+	color: #646464;
+}
+
+.article-info {
+	color: #646464;
+}
+
+.article p {
+	text-indent: 2em;
+}
+
+.article img {
+	display: block;
+	max-height: 600px;
+	max-width: 80%;
+}
+
+.article ul {
+	list-style: none;
+}
+
+.article .pic {
+	display: inline-block;
+	margin: 10px;
+	border: 1px solid #dcdcdc;
+	padding: 10px;
+}
+
+.article .pic img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80px;
+}
+
+.article .pic p {
+	margin-top: 0;
+	text-indent: 0;
+	text-align: center;
+}
+
+.article table {
+	width: 100%;
+	border-spacing: 0;
+	border: 1px solid #ccc;
+}
+
+.article table thead {
+	text-align: left;
+	color: #fff;
+	background-color: #000;
+}
+
+.article table thead th {
+	border: 1px solid #fff;
+}
+
+.article table tbody td {
+	border: 1px solid #ccc;
+}
+
+.article table tfoot {
+	font-weight: 700;
+	background-color: #ccc;
+}
+
+/*侧边栏*/
+#sidebar {
+	float: right;
+	width: 350px;
+	margin: 20px;
+	border-top: 1px solid #cbcbcb;
+	border-right: 2px solid #848484;
+	border-bottom: 2px solid #848484;
+	border-left: 1px solid #cbcbcb;
+	padding: 20px;
+	background-color: #fff;
+}
+
+#sidebar h2 {
+	border-left: 3px solid #cbcbcb;
+	padding: 8px;
+	font-size:18px; 
+}
+
+#sidebar form .input-data {
+	display: table;
+}
+
+#sidebar form .table-row {
+	display: table-row;
+}
+
+#sidebar form .table-row * {
+	display: table-cell;
+	margin: 5px;
+	padding: 5px;
+	text-align: left;
+}
+
+#sidebar form .table-row label{
+	text-align: right;
+}
+
+#sidebar form label[for=desc] {
+	vertical-align: top;
+}
+
+#sidebar form textarea {
+	width: 100px;
+	height: 50px;
+}
+
+#sidebar form input[type=submit] {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #3355d0;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #3355d0;
+}
+
+/*页脚*/
+#footer {
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+#footer p {
+	text-align: center;
+	line-height: 60px;
+	font-size: 12px;
+	color: #fff;
+}

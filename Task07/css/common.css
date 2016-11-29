@@ -1,0 +1,165 @@
+.container {
+	position: relative;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #fff;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 56px;
+	border-bottom: 1px solid #d9d9dd;
+}
+
+.header img {
+	position: absolute;
+	left: 60px;
+	/*logo图片的垂直居中，top=50%，margin-top减掉自身的一半*/
+	/*这种方式常用块元素绝对定位方式的垂直居中*/
+	top: 50%;
+	margin-top: -15px;
+}
+
+.header h1 {
+	position: absolute;
+	left: 100px;
+	top: 50%;
+	margin-top: -10px;
+	font: 21px "黑体";	
+}
+
+.header .nav {
+	display: block;
+	width: 30%;
+	height: 56px;
+	position: absolute;
+	left: 50%;
+}
+
+.header .nav ul {
+	width: 100%;
+	height: 56px;
+	font-size: 0px;
+}
+
+.header .nav ul li {
+	display: inline-block;
+	width: 20%;
+	height: 56px;
+	/*水平居中*/
+	text-align: center;
+	font: 14px "Microsoft YaHei";
+	/*单行文本时，line-height=height垂直居中*/
+	line-height: 56px;
+	cursor: pointer;
+}
+
+.header .nav ul li a {
+	/*父元素的颜色优先级低于a的伪类元素颜色优先级，无法继承父类，
+	但是选择器优先级高于a的伪类*/
+}
+
+.header .nav ul li a:linked {
+	color: #787b83;
+}
+
+.header .nav ul li a:visited {
+	color: #787b83;
+}
+
+.header .nav ul li a:hover {
+	color: #e74f4d;
+}
+
+.header .nav ul li a:active {
+
+}
+
+.header .nav .nav-move {
+	position: absolute;
+	left: 0;
+	top: 52px;
+	height: 0;
+	border-top: 4px solid #e74f4d;
+	
+	-webkit-transition: left 0.4s ease-in-out;
+	   -moz-transition: left 0.4s ease-in-out;
+		    transition: left 0.4s ease-in-out;
+}
+
+/*在使用 ~ 连接两个元素时,它会匹配第二个元素,
+条件是它必须跟(不一定是紧跟)在第一个元素之后,
+且他们都有一个共同的父元素*/
+.header .nav ul li:nth-child(2):hover ~ .nav-move {
+	left: 20%;
+}
+
+.header .nav ul li:nth-child(3):hover ~ .nav-move {
+	left: 40%;
+}
+
+.header .nav ul li:nth-child(4):hover ~ .nav-move {
+	left: 60%;
+}
+
+.header .nav ul li:nth-child(5):hover ~ .nav-move {
+	left: 80%;
+}
+
+.header .login {
+	width: 10%;
+	height: 56px;
+	position: absolute;
+	right: 60px;
+	text-align: center;
+}
+
+.header .login img {
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	margin-top: -9px;
+}
+
+.header .login a {
+	display: inline-block;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	font-weight: 700;
+	color: #e74f4d;
+	/*line-height=height的居中方式要把line-height语句放在字体大小后面*/
+	text-align: center;
+	line-height: 56px;
+
+	-webkit-transition: font-size 0.1s ease-in-out;
+	   -moz-transition: font-size 0.1s ease-in-out;
+	        transition: font 0.1s ease-in-out;
+}
+
+.header .login a:hover {
+	font-size: 18px;
+}
+
+.footer {
+	position: relative;
+	width: 100%;
+	height: 56px;
+	background-color: #2f3038;
+}
+
+.footer .footer-text {
+	float: left;
+	padding-left: 100px;
+	padding-top: 32px;
+	font: 12px "宋体";
+	color: #fff;
+}
+
+.footer .footer-link2top {
+	float: right;
+	padding-right: 40px;
+	padding-top: 32px;
+	font: 12px "宋体";
+	color: #fff;
+}

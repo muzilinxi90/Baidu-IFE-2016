@@ -1,0 +1,729 @@
+.main {
+	position: relative;
+}
+
+.section1 {
+	position: relative;
+	width: 100%;
+	height: 690px;
+	background-image: url("../images/section1.jpg");
+	background-size: cover;
+}
+
+.section1 .bg-mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 690px;
+	background-color: #000;
+	/*opacity是一个位于0.0到1.0之间的小数，
+	1.0为完全不透明，0.0为完全透明*/
+	opacity: 0.2;
+}
+
+.section1 .en-slogon {
+	position: absolute;
+	left: 116px;
+	top: 230px;
+	font-size: 60px;
+	color: #fff;
+}
+
+.section1 .cn-slogon {
+	position: absolute;
+	left: 120px;
+	top: 310px;
+	font-size: 21px;
+	color: #fff;
+}
+
+.section1 a {
+	display: block;
+	position: absolute;
+	left: 120px;
+	top: 430px;
+	width: 330px;
+	height: 64px;
+	background-color: #e74f4d;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	line-height: 64px;
+
+	-webkit-transition: background-color 0.4s ease-in-out;
+	   -moz-transition: background-color 0.4s ease-in-out;
+	        transition: background-color 0.4s ease-in-out;
+}
+
+.section1 a:hover {
+	background-color: #f00;
+}
+
+
+.section2 {
+	position: relative;
+	width: 100%;
+	height: 250px;
+}
+
+.section2 ul {
+	height: 100%;
+	/*li之间有空白符，随字体大小变化，设置字体大小为0可以去掉间隙
+	进而使用width: 25%;的属性*/
+	font-size: 0px;
+}
+
+.section2 ul li {
+	display: inline-block;
+	position: relative;
+	width: 25%;
+	height: 100%;
+	font: 14px "黑体";
+}
+
+.section2 ul li img {
+	display: block;
+	margin: 45px auto 0 auto;
+}
+
+.section2 ul li p {
+	width: 154px;
+	height: 52px;
+	margin: 48px auto 0 auto;
+	padding: 0 84px;
+	text-align: center;
+}
+
+/*n从0开始计数，nth-child选择第二个往后的li元素*/
+.section2 ul li:nth-child(n+2) p {
+	border-left: 2px solid #767777;
+}
+
+
+.section3 {
+	position: relative;
+	width: 100%;
+	height: 360px;
+	background-color: #edecec;
+	text-align: center;
+}
+
+.section3 img {
+	display: inline-block;
+	margin-top: 88px;
+}
+
+.section3 p {
+	margin-top: 50px;
+	font: 54px "黑体";
+	color: #acadad;
+}
+
+
+.section4 {
+	position: relative;
+	width: 100%;
+	height: 340px;
+	background-image: url(../images/section4.jpg);
+	background-size: cover;
+}
+
+/*决定定位元素会位于最上层，将其他非绝对定位的元素遮住，
+导致下层动画和下拉选框无法使用，最好将图像和遮罩合并
+一起裁剪作为背景图*/
+/*.section4 .section4-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #aa3432;
+	opacity: 0.2;
+}*/
+
+.section4 .section4-text {
+	width: 100%;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.section4 .section4-text .text-title {
+	font-size: 21px;
+	color: #fff;
+}
+
+.section4 .section4-text .line,
+.section7 ul .section7-left .line,
+.section7 ul .section7-middle .line,
+.section8 .section8-title .line {
+	width: 30px;
+	height: 0px;
+	margin: 10px auto 0 auto;
+	border-top: 3px solid #fff;
+
+	-webkit-transition: width 0.4s ease-in-out;
+	   -moz-transition: width 0.4s ease-in-out;
+	        transition: width 0.4s ease-in-out;
+}
+
+.section4 .section4-text .text-title:hover ~ .line,
+.section7 ul .section7-left p:hover ~ .line,
+.section7 ul .section7-middle p:hover ~ .line,
+.section8 .section8-title h3:hover ~ .line {
+	width: 300px;
+}
+
+.section4 .section4-text .text-description {
+	margin-top: 20px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.section4 .section4-option {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.section4 .section4-option ul {
+	padding: 0 50px;
+	font-size: 0px;
+	text-align: center;
+}
+
+.section4 .section4-option ul li {
+	display: inline-block;
+	width: 25%;
+}
+
+.section4 .section4-option ul li select {
+	width: 234px;
+	height: 36px;
+	border: 0;
+	border: 2px solid #fff;
+	font: 12px "Microsoft YaHei";
+	color: #787878;
+	outline: none;
+}
+
+.section4 .section4-option ul li select:hover {
+	border: 2px solid #be4f48;
+}
+
+.section4 .section4-option ul li input {
+	width: 234px;
+	height: 36px;
+	border: 0;
+	font: 14px "Microsoft YaHei";
+	color: #fff;
+	background-color: #be4e48;
+
+	-webkit-transition: background-color 0.4s ease-in-out;
+	   -moz-transition: background-color 0.4s ease-in-out;
+	        transition: background-color 0.4s ease-in-out;
+}
+
+.section4 .section4-option ul li input:hover {
+	background-color: #f00;
+}
+
+
+.section5 {
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+
+.section5 ul {
+	position: relative;
+	height: 100%;
+	padding: 0 146px;
+	font-size: 0px;
+}
+
+.section5 ul li {
+	position: relative;
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+}
+
+.section5 ul li .section5-show {
+	/*绝对定位居中*/
+	position: absolute;
+	width: 220px;
+	height: 390px;
+	left: 50%;
+	top: 50%;
+	margin-left: -110px;
+	margin-top: -195px;
+	text-align: center;
+}
+
+.section5 ul li .section5-show img {
+	width: 200px;
+	height: 310px;
+	padding: 10px;
+	border-top: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+	border-left: 1px solid #dadada;
+}
+
+.section5 ul li .main-show img {
+	border-bottom: 1px solid #dadada;
+}
+
+.section5 ul li .section5-show h3 {
+	font-size: 14px;
+}
+
+.section5 ul li .main-show h3 {
+	font-size: 20px;
+}
+
+.section5 ul li .section5-show p {
+	font-size: 12px;
+	color: #9f9f9f;
+}
+
+
+.section6 {
+	position: relative;
+	width: 100%;
+	height: 566px;
+}
+
+.section6 .section6-left {
+	float: left;
+	position: relative;
+	width: 66%;
+	height: 100%;
+	background-image: url(../images/section6-pic.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+.section6 .section6-left .left-text {
+	padding-top: 130px;
+}
+
+.section6 .section6-left .left-text p {
+	color: #fff;
+}
+
+.section6 .section6-left .left-text p:nth-child(1) {
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.section6 .section6-left .left-text p:nth-child(2) {
+	font-size: 158px;
+	line-height: 158px;
+}
+
+.section6 .section6-left .left-text p:nth-child(3) {
+	padding-top: 26px;
+	font-size: 22px;
+	line-height: 22px;
+
+}
+
+.section6 .section6-left .left-text p:nth-child(4) {
+	padding-top: 22px;
+	font-size: 22px;
+	line-height: 22px;
+}
+
+/*白色三角形添加方法*/
+/*CSS3中伪元素为两个冒号，伪类一个冒号*/
+.section6 .section6-left::after {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -15px;
+	content: "";
+	border-top: 15px solid transparent;
+	border-right: 30px solid #fff;
+	border-bottom: 15px solid transparent;
+}
+
+.section6 .section6-right {
+	float: right;
+	position: relative;
+	width: 34%;
+	height: 100%;
+	text-align: center;
+}
+
+.section6 .section6-right .right-control {
+	position: absolute;
+	left: 50%;
+	margin-left: -45px;
+	bottom: 130px;
+	font-size: 0;
+}
+
+.section6 .section6-right .right-control li {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-left: 8px;
+	margin-right: 8px;
+	border: 2px solid #919192;
+	border-radius: 10px; 
+}
+
+.section6 .section6-right .right-control li:hover {
+	background-color: #919192;
+}
+
+.section6 .section6-right .button-more {
+	position: absolute;
+	left: 50%;
+	bottom: 166px;
+	width: 100px;
+	height: 30px;
+	margin-left: -52px;
+	border: 2px solid #e5676a;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 30px;
+	color: #e5676a;
+
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+}
+
+.section6 .section6-right .button-more:hover {
+	color: #fff;
+	background-color: #e5676a;
+}
+
+.section6 .section6-right h3 {
+	padding-top: 166px;
+	font-size: 22px;
+}
+
+.section6 .section6-right h3 span {
+	color: #e5676a;
+}
+
+.section6 .section6-right p {
+	margin: 0 auto;
+	padding-top: 30px; 
+	width: 290px;
+	height: 120px;
+	font-size: 12px;
+	color: #919192;
+	text-align: left;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+.section7 {
+	position: relative;
+	width: 100%;
+	height: 520px;
+}
+
+.section7 ul {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+.section7 ul li {
+	display: inline-block;
+	/*去掉这句异常？？？*/
+	overflow: hidden;
+}
+
+.section7 ul .section7-left {
+	width: 33%;
+	height: 100%;
+	background-color: #e74f4d;
+}
+
+.section7 ul .section7-middle {
+	width: 33%;
+	height: 100%;
+}
+
+.section7 ul .section7-right {
+	width: 34%;
+	height: 100%;
+	background-image: url(../images/section7-pic.jpg);
+	background-size: cover;
+}
+
+.section7 ul p {
+	width: 100%;
+	padding-top: 170px;
+	font: 21px "黑体";
+	line-height: 34px;
+	text-align: center;
+}
+
+.section7 ul .section7-left {
+	color: #fff;
+}
+
+.section7 ul .section7-middle {
+	color: #000;
+}
+
+.section7 ul .section7-left .line {
+	margin: 26px auto;
+	border-color: #fff;
+}
+
+.section7 ul .section7-middle .line {
+	margin: 26px auto;
+	border-color: #aaa;
+}
+
+.section7 ul li .button-more {
+	width: 170px;
+	height: 40px;
+	margin: 0 auto;
+	border-width: 1px;
+	border-style: solid;
+	font: 21px "黑体";
+	text-align: center;
+	line-height: 40px; 
+}
+
+.section7 ul .section7-left .button-more {
+	border-color: #fff;
+}
+
+.section7 ul .section7-left .button-more:hover {
+	color: #e74f4d;
+	background-color: #fff;
+}
+
+.section7 ul .section7-middle .button-more {
+	border-color: #e74f4d;
+	color: #e74f4d;
+}
+
+.section7 ul .section7-middle .button-more:hover {
+	color: #fff;
+	background-color: #e74f4d;
+}
+
+/*绘制三角形*/
+.section7 ul .section7-right::after {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	content: "";
+	border-left: 30px solid #fff;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+
+
+.section8 {
+	position: relative;
+	height: 750px;
+	padding-left: 136px;
+	padding-right: 136px;
+}
+
+.section8 .section8-title {
+	width: 100%;
+	padding-top: 120px;
+	padding-bottom: 100px;
+	text-align: center;  
+}
+
+.section8 .section8-title h3 {
+	font: 21px "黑体";
+	font-weight: 700;
+}
+
+.section8 .section8-title .line {
+	border-color: #e74f4d;
+	margin-bottom: 16px;
+}
+
+.section8 .section8-title p {
+	width: 420px;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #aaa;
+}
+
+.section8 .section8-itemInfo {
+	float: left;
+	width: 280px;
+}
+
+.section8 .section8-itemInfo h4 {
+	font: 14px "黑体";
+	font-weight: 700;
+	margin-bottom: 26px;
+}
+
+.section8 .section8-itemInfo p {
+	font: 12px "宋体";
+	color: #9d9b9a;
+}
+
+.section8 .section8-itemInfo .itemInfo-more {
+	position: relative;
+	font: 12px "宋体";
+	color: #9d9b9a;
+	text-align: right;
+}
+
+.section8 .section8-itemInfo .itemInfo-more span::before {
+	display: inline-block;
+	margin-right: 8px;
+	content: "";
+	border-top: 6px solid #9d9b9a;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.section8 .section8-itemInfo .itemInfo {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.section8 .section8-form {
+	float: right;
+	width: 640px;
+}
+
+.section8 .section8-form input {
+	display: inline-block;
+	width: 300px;
+	height: 40px;
+	margin-bottom: 15px;
+	border: none;
+	background-color: #ededee;
+	font: 12px "宋体";
+	outline: 0;
+}
+
+.section8 .section8-form input[type=text] {
+	padding-left: 10px;
+}
+
+.section8 .section8-form input[type=text]:hover {
+	background-color: #fff;
+}
+
+.section8 .section8-form input:nth-child(1) {
+	float: left;
+}
+
+.section8 .section8-form input:nth-child(2) {
+	float: right;
+	clear: right;
+}
+
+.section8 .section8-form input:nth-child(3) {
+	float: left;
+}
+
+.section8 .section8-form input:nth-child(4) {
+	float: right;
+	clear: right;
+}
+
+.section8 .section8-form textarea {
+	width: 100%;
+	height: 160px;
+	border: none;
+	padding-left: 10px;
+	background-color: #ededee;
+	font: 12px "宋体";
+	line-height: 30px;
+	/*去掉右下角调整大小图标*/
+	resize: none;
+	/*去掉选中时的蓝色边框*/
+	outline: 0;
+}
+
+.section8 .section8-form textarea:hover {
+	background-color: #fff;
+}
+
+.section8 .section8-form input[type=submit] {
+	width: 100%;
+	height: 40px;
+	margin-top: 15px;
+	padding: auto auto;
+	font: 14px "黑体";
+}
+
+.section8 .section8-form input[type=submit]:hover {
+	font-weight: 700;
+	background-color: #ddd;
+}
+
+
+.section9 {
+	position: relative;
+	width: 100%;
+	height: 360px;
+	padding-top: 90px;
+	background-color: #32363e;
+	text-align: center;
+}
+
+.section9 h3 {
+	font: 21px "黑体";
+	color: #fff;
+}
+
+.section9 p {
+	width: 470px;
+	margin: 12px auto 0 auto;
+	font: 12px "宋体";
+	color: #fff;
+}
+
+.section9 .section9-mesbox {
+	position: relative;
+	width: 510px;
+	height: 42px;
+	margin: 35px auto;
+	font-size: 0;
+}
+
+.section9 .section9-mesbox input[type=text] {
+	width: 400px;
+	height: 100%;
+	border: none;
+	outline: 0;
+	padding-left: 10px;
+	font: 14px "Microsoft YaHei";
+}
+
+.section9 .section9-mesbox input[type=submit] {
+	position: relative;
+	bottom: -1px;
+	width: 100px;
+	height: 100%;
+	border: none;
+	outline: 0;
+	background-color: #6f7278;
+	font: 15px "Microsoft YaHei";
+	color: #fff;
+}
+
+.section9 ul {
+	width: 100%;
+	font-size: 0;
+}
+
+.section9 ul li {
+	display: inline-block;
+	width: 25px;
+	width: 25px;
+	margin: 0 30px;
+}
